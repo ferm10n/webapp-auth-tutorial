@@ -1,0 +1,25 @@
+{
+  "name": "webapp-auth-tutorial",
+  "version": "1.0.0",
+  "description": "A tutorial for building a web application with authentication",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jws121295/webapp-auth-tutorial.git"
+  },
+  "author": "John Sanders",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jws121295/webapp-auth-tutorial/issues"
+  },
+  "homepage": "https://github.com/jws121295/webapp-auth-tutorial#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1"
+  }
+}
