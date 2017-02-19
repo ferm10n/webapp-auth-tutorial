@@ -1,0 +1,30 @@
+html,body {
+    background-color:#444;
+    color:#ccc;
+    font-family: sans-serif;
+    text-align: center;
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
+
+div {
+    flex:1;
+}
+
+.login-area {
+    background-color:#ccc;
+    color:#444;
+}
+
+#msg {
+    color:red;
+}
+
+input {
+    font-size:.2in;
+    display:block;
+    margin:auto;
+    margin-top:.1in;
+    width:3in;
+}
