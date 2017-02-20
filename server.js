@@ -1,15 +1,9 @@
 var express = require("express");
 var app = express();
 
-app.get("/login.html", function(req, res){
-    res.write("login page");
-    res.end();
-});
+var staticHandler = express.static("public");
 
-app.get("/home.html", function(req, res){
-    res.write("home page");
-    res.end();
-});
+app.use(staticHandler);
 
 var port = process.env.PORT;
 app.listen(port);
