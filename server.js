@@ -1,11 +1,13 @@
 // UTILS
 var express = require("express");
 var sessions = require("express-session");
+var bodyParsers = require("body-parser");
 var app = express();
 
 
 
 // MUTUAL STUFF
+app.use(bodyParsers.urlencoded());
 app.use(sessions({
     secret:"superdupersecret"
 }));
@@ -16,8 +18,12 @@ app.use(sessions({
 var publicReqHandler = express.Router();
 
 publicReqHandler.post("/login.html", function(req, res){
-    req.session.isLoggedIn = true;
-    res.redirect("/home.html");
+    if(req.body.username == "john" && req.body.password == "B@dP@ssw0rd"){
+        req.session.isLoggedIn = true;
+        res.redirect("/home.html");
+    } else {
+        res.redirect("/login.html#invalid, try again");
+    }
 });
 
 publicReqHandler.use(express.static("public"));
