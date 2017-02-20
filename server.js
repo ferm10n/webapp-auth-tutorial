@@ -1,11 +1,14 @@
 var express = require("express");
 var app = express();
 
-var staticHandler = express.static("public");
 var publicReqHandler = express.Router();
-publicReqHandler.use(staticHandler);
+publicReqHandler.use(express.static("public"));
+
+var privateReqHandler = express.Router();
+privateReqHandler.use(express.static("private"));
 
 app.use(publicReqHandler);
+app.use(privateReqHandler);
 
 var port = process.env.PORT;
 app.listen(port);
