@@ -1,11 +1,12 @@
-var http = require("http");
+var express = require("express");
+var app = express();
 
 function requestHandler(requestDetails, response){
     response.write("Hello");
     response.end();
 }
 
-var server = http.createServer(requestHandler);
+app.get("*", requestHandler);
 
 var port = process.env.PORT;
-server.listen(port);
+app.listen(port);
