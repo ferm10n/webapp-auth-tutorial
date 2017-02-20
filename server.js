@@ -1,12 +1,15 @@
 var express = require("express");
 var app = express();
 
-function requestHandler(requestDetails, response){
-    response.write("Hello");
-    response.end();
-}
+app.get("/login.html", function(req, res){
+    res.write("login page");
+    res.end();
+});
 
-app.get("*", requestHandler);
+app.get("/home.html", function(req, res){
+    res.write("home page");
+    res.end();
+});
 
 var port = process.env.PORT;
 app.listen(port);
