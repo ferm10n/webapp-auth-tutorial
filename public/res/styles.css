@@ -12,7 +12,7 @@ div {
     flex:1;
 }
 
-.login-area {
+.alt-area {
     background-color:#ccc;
     color:#444;
 }
@@ -27,4 +27,8 @@ input {
     margin:auto;
     margin-top:.1in;
     width:3in;
+}
+
+a{
+    color:white;
 }

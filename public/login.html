@@ -5,8 +5,9 @@
         <div>
             <h1>Hello! This is the login page</h1>
             <h2>Anyone can see this page</h2>
+            <a href="/home.html">Go to private home page</a>
         </div>
-        <div class="login-area">
+        <div class="alt-area">
             <h2>Please login:</h2>
             <div id="msg">&nbsp;</div>
             <form method="POST" action="/login">
@@ -16,8 +17,8 @@
             </form>
         </div>
         <script>
-            var msg = window.location.href || "";
-            document.getElementById("msg").innerHTML = msg;
+            var msg = decodeURI(window.location.hash) || "";
+            document.getElementById("msg").innerHTML = msg.replace("#", "");
         </script>
     </body>
 </html>
